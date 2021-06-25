@@ -23,7 +23,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
 <h1>CrudY - Version 2</h1>
 <!-- Create Button -->
 <p>
-  <a href="create.php" class="btn btn-success">Create Product</a>
+  <a href="/products/create.php" class="btn btn-success">Create Product</a>
 </p>
 <!-- Create Button End -->
 <!-- Quick Search -->
@@ -50,12 +50,12 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
     <?php foreach ($products as $index => $product) : ?>
       <tr>
         <th scope="row"><?php echo $index + 1 ?></th>
-        <td><img src="<?php echo $product['image'] ?>" class="thumb-img"></td>
+        <td><img src="/<?php echo $product['image'] ?>" class="thumb-img"></td>
         <td><?php echo $product['title'] ?></td>
         <td><?php echo $product['price'] ?></td>
         <td><?php echo $product['create_date'] ?></td>
         <td>
-          <a href="update.php?id=<?php echo $product['id'] ?>" class="btn btn-sm btn-outline-primary">Edit</a>
+          <a href="/products/update.php?id=<?php echo $product['id'] ?>" class="btn btn-sm btn-outline-primary">Edit</a>
           <form action="delete.php" method="post" style="display:inline-block">
             <input type="hidden" name="id" value="<?php echo $product['id'] ?>">
             <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>

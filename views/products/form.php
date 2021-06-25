@@ -10,7 +10,7 @@
 <!-- FORM -->
 <form action="" method="post" enctype="multipart/form-data">
   <?php if ($product['image']) : ?>
-    <img class="update-img" src="<?php echo $product['image'] ?>" alt="<?php echo $product['title'] ?>">
+    <img class="update-img" src="/<?php echo $product['image'] ?>" alt="<?php echo $product['title'] ?>">
   <?php endif; ?>
   <div class="mb-3">
     <label>Product Image</label><br>
