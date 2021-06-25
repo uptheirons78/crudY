@@ -1,6 +1,6 @@
-<?php require_once __DIR__ . '/database.php' ?>
 <?php
 
+require_once __DIR__ . '/../../database.php';
 // search variable based on query string search parameter
 $search = $_GET['search'] ?? '';
 
@@ -18,7 +18,7 @@ $statement->execute();
 $products = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
-<?php include_once __DIR__ . '/views/partials/header.php' ?>
+<?php include_once __DIR__ . '/../../views/partials/header.php' ?>
 
 <h1>CrudY - Version 2</h1>
 <!-- Create Button -->
@@ -67,4 +67,4 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
 </table>
 <!-- Table End -->
 
-<?php include_once __DIR__ . '/views/partials/footer.php' ?>
+<?php include_once __DIR__ . '/../../views/partials/footer.php' ?>

@@ -1,5 +1,5 @@
 <?php
-  require_once __DIR__ . '/database.php';
+  require_once __DIR__ . '/../../database.php';
   // set $id variable
   $id = $_POST['id'] ?? null;
   // check if $id exists or not
