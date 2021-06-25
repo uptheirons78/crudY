@@ -36,7 +36,10 @@
         <td><?php echo $product['create_date'] ?></td>
         <td>
           <button class="btn btn-sm btn-outline-primary">Edit</button>
-          <button class="btn btn-sm btn-outline-danger">Delete</button>
+          <form action="delete.php" method="post" style="display:inline-block">
+            <input type="hidden" name="id" value="<?php echo $product['id'] ?>">
+            <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+          </form>
         </td>
       </tr>
       <?php endforeach; ?>
