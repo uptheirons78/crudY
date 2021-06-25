@@ -109,7 +109,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </p>
 <!-- Back Home Button End -->
 <h1>Update Product: <b style="color: purple;"><?php echo $product['title'] ?></b></h1>
-<h4><?php echo dirname($product['image']) ?></h4>
 <!-- ERROR BANNER -->
 <?php if (!empty($errors)) : ?>
   <div class="alert alert-danger">

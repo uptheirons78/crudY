@@ -20,7 +20,7 @@ $products = $statement->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <?php include_once __DIR__ . '/view/partials/header.php' ?>
 
-<h1>CrudY - Version 1</h1>
+<h1>CrudY - Version 2</h1>
 <!-- Create Button -->
 <p>
   <a href="create.php" class="btn btn-success">Create Product</a>
