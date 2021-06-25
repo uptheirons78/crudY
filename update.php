@@ -101,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 ?>
-<?php include_once __DIR__ . '/view/partials/header.php' ?>
+<?php include_once __DIR__ . '/views/partials/header.php' ?>
 
 <!-- Back Home Button -->
 <p>
@@ -109,38 +109,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </p>
 <!-- Back Home Button End -->
 <h1>Update Product: <b style="color: purple;"><?php echo $product['title'] ?></b></h1>
-<!-- ERROR BANNER -->
-<?php if (!empty($errors)) : ?>
-  <div class="alert alert-danger">
-    <?php foreach ($errors as $error) : ?>
-      <div><?php echo $error ?></div>
-    <?php endforeach; ?>
-  </div>
-<?php endif; ?>
-<!-- ERROR BANNER END -->
-<!-- FORM -->
-<form action="" method="post" enctype="multipart/form-data">
-  <?php if ($product['image']): ?>
-    <img class="update-img" src="<?php echo $product['image'] ?>" alt="<?php echo $product['title'] ?>">
-  <?php endif; ?>
-  <div class="mb-3">
-    <label>Product Image</label><br>
-    <input type="file" name="image">
-  </div>
-  <div class="mb-3">
-    <label>Product Title</label>
-    <input type="text" class="form-control" name="title" value="<?php echo $title ?>">
-  </div>
-  <div class="mb-3">
-    <label>Product Description</label>
-    <textarea class="form-control" name="description"><?php echo $description ?></textarea>
-  </div>
-  <div class="mb-3">
-    <label>Product Price</label>
-    <input type="number" step=".01" class="form-control" name="price" value="<?php echo $price ?>">
-  </div>
-  <button type="submit" class="btn btn-primary">Create</button>
-</form>
-<!-- FORM END -->
-
-<?php include_once __DIR__ . '/view/partials/footer.php' ?>
+<?php include_once __DIR__ . '/views/products/form.php' ?>
+<?php include_once __DIR__ . '/views/partials/footer.php' ?>
